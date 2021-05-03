@@ -1,4 +1,4 @@
-# Discord Bug Token
+# Discord Vulnerabilidade Token
  ## Este é um bug do discord onde é possivel conseguir o token de um usuario apenas com um comando
 
  ### Oque precisa ser feito para acontecer o bug:
