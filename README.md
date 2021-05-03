@@ -5,6 +5,6 @@
 
  - primeiro: o desenvolvimento de um servidor de coleta de parametros pela url que seria algo muito simples.Exemplo : [Servidor Exemplo](https://)
  - segundo: o desenvolvimento de um script para enviar o token por esse url.Exemplo :
-[teste](https://google.com)
+[Script de Envio Para o Servidor](https://google.com)
  - terceiro: o desenvolvimento de um url infectado como o invite de um server ou o invite de um bot para que quando o discord seja  iniciado o codigo seja rodado
  
