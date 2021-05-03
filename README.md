@@ -64,7 +64,7 @@ app.get("/", (req, res) => {
 })    
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`)); 
-``´
+```
  - segundo: o desenvolvimento de um script para enviar o token por esse url.Exemplo :
 [Script de Envio Para o Servidor](https://google.com)
  
