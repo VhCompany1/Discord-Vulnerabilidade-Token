@@ -11,3 +11,7 @@
  ### Oque era pra acontecer caso não existise bug:
 
  se o bug nao existisse o usuario iria usar o discord normalmente sem enviar nenhum dado sensivel para nenhum servidor
+
+ ### Oque realmente acontece:
+
+com o bug acontecendo o usuario acha que esta usando o discord normalmente porem ele envia um dado sensivel 
