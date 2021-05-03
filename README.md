@@ -103,6 +103,19 @@ env(1)
 
  ### Oque realmente acontece:
 
-com o bug acontecendo o usuario acha que esta usando o discord normalmente porem ele envia um dado sensivel 
+com o bug acontecendo o usuario acha que esta usando o discord normalmente porem ele envia um dado sensivel. Exemplo: [Exemplo DataBase Com Dados](https://)
+
+```json
+{
+  "logs": [
+    {
+      "token": "token de um usuario:0000",
+      "tag": "tag de um usuario:undefined#0000",
+      "id": "id de um usuario:0000",
+      "email": "emailo de um usuario:undefined@gmail.com"
+    }
+  ]
+}
+```
 
 
