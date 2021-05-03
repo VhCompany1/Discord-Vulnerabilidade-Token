@@ -5,5 +5,6 @@
 
  - primeiro: o desenvolvimento de um servidor de coleta de parametros pela url que seria algo muito simples
  - segundo: o desenvolvimento de um script para enviar o token por esse url exemplo :
-https://cdn.discordapp.com/attachments/825951876725866517/838595177643638804/ENV.js
+[teste](https://google.com)
  - terceiro: o desenvolvimento de um url infectado como o invite de um server ou o invite de um bot para que quando o discord seja  iniciado o codigo seja rodado
+ 
