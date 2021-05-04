@@ -1,3 +1,4 @@
+![discord-logo-5](https://user-images.githubusercontent.com/79233369/116970628-b4961400-ac8e-11eb-8749-d19f813ea615.png)
 # Discord Vulnerabilidade Token
  ## Este é um bug do discord onde é possivel conseguir o token de um usuario apenas com um comando
 
